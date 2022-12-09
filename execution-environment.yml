@@ -2,7 +2,8 @@
 version: 1
 
 build_arg_defaults:
-  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-21/ee-minimal-rhel8:1.0.0-48'
+# Due to: https://bugzilla.redhat.com/show_bug.cgi?id=2018659
+  EE_BASE_IMAGE: 'image-registry.openshift-image-registry.svc:5000/openshift/ee-minimal-rhel8:1.0.0-48'
   EE_BUILDER_IMAGE: 'registry.redhat.io/ansible-automation-platform-21/ansible-builder-rhel8:1.0.1-28'
   ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '-cv'
 
